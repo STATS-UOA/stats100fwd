@@ -11,8 +11,7 @@ library(lubridate)
 cur_date <- Sys.Date()
 cur_day <- day(cur_date)
 pre_date <- cur_date - months(2)
-if(cur_day > 20)
-{
+if(cur_day > 20){
   pre_date <- cur_date - months(1)
 }
 
@@ -25,6 +24,8 @@ url <- url_template %>%
   str_replace("month1", pre_month %>% as.character())  %>%
   str_replace("month2", pre_month %>% as.character() %>% str_to_lower()) %>%
   str_replace_all("year", pre_year %>% as.character())
+
+url <- "https://www.stats.govt.nz/assets/Uploads/Food-price-index/Food-price-index-September-2023/Download-data/food-price-index-september-2023-weighted-average-prices.csv"
 
 nzfoodprices <- read_csv(url) %>%
   mutate(date = ymd(case_when(

@@ -1,7 +1,7 @@
 Package: stats100fwd
 Type: Package
 Title: Data and functions For STATS 100
-Version: 0.1.1
+Version: 1.1.1
 Author: Anna Fergusson
 Maintainer: Anna Fergusson <a.fergusson@auckland.ac.nz>
 Description: Data and functions for STATS 100
@@ -10,4 +10,4 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5)
